@@ -26,7 +26,7 @@
         <div class="alert alert-danger">
             <strong>Some fields are missing</strong>
           </div>
-        <form action="/action_page.php">
+        <form action="/action_page.php" novalidate>
             
              <div class="form-group">
                 <div class="row"> 
@@ -36,11 +36,11 @@
                     </div> 
                     <div class="col-sm-3"> 
                         <label for="cvc">CVC #</label>
-                        <input type="text" class="form-control" id="cvc" placeholder="0000" name="cvc" required>
+                        <input type="number" class="form-control" id="cvc" placeholder="0000" name="cvc" required>
                     </div>  
                     <div class="col-sm-4"> 
                         <label for="amount">Amount<span> $ </span></label><br>
-                        <input type="text" class="form-control" id="amount" placeholder="Amount" name="uname" required>
+                        <input type="number" class="form-control" id="amount" placeholder="Amount" name="uname" required>
                     </div>       
                 </div>
                 <div class="row"> 
@@ -55,13 +55,16 @@
                 </div> 
                 <div class="row"> 
                     <div class="col-sm-6">  
-                        <label for="city">City</label>
-                        <input type="text" class="form-control" id="city" placeholder="" name="city" required>
+                        <label for="validationCustom03">City</label>
+                        <input type="text" class="form-control" id="validationCustom03" placeholder="" name="city" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid city.
+                          </div>
                     </div> 
                     <div class="col-sm-3"> 
                         <label for="sel1">State</label>
                         <select class="form-control" id="sel1">
-                            <option>Pick a state</option>
+                            <option selected disabled value="">Choose...</option>
                             <option>France</option>
                             <option>Italy</option>
                             <option>Morocco</option>
@@ -70,7 +73,7 @@
                     </div>  
                     <div class="col-sm-3"> 
                         <label for="postalcode">Postal Code</label>
-                        <input type="text" class="form-control" id="postalcode" placeholder="" name="postalcode" required>
+                        <input type="number" class="form-control" id="postalcode" placeholder="" name="postalcode" required>
                     </div>       
                 </div> 
                 <p class="col-sm-12"></p>
